@@ -4,48 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enoch Elumba</title>
+    <meta name="description" content="Enoch Elumba's Personal Webpage">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- 
-    about
-    projects
-    experience
-    + navigation
--->
     <header class="header">
         <nav class="nav">
             <ul>
-                <button class="nav-button">About</button>
-                <button class="nav-button">Projects</button>
-                <button class="nav-button">Contact</button>            
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>   
+                <li><a href="#contact">Contact</a></li>        
             </ul>
         </nav>
     </header>
-    <div class="about">
-        <h1>Enoch Elumba</h1>
-        <p>Welcome to my personal webpage! I am passionate about creating innovative solutions and building impactful software. Explore my projects and experience to learn more about my work.</p>
-    </div>
-    <div class="projects">
-        <h2>Projects</h2> 
-            <section class="sub-projects">
-                <h3>Project 1</h3>
-                <p>A brief description of Project 1.</p>
-            </section>
-            <section class="sub-projects">
-                <h3>Project 2</h3>
-                <p>A brief description of Project 2.</p>
-            </section>
-            <section class="sub-projects">
-                <h3>Project 3</h3>
-                <p>A brief description of Project 3.</p>
-            </section>
-    </div>
-</body>
-<footer>Contact
-    <button class="footer-button">LinkedIn</button>
-    <button class="footer-button">GitHub</button>
-    <button class="footer-button">Email</button>
-</footer>
 
+    <main>
+        <h1>Enoch Elumba</h1>
+        <div>
+            <h2 id="about">About Me</h2>
+            <p>Hi my name is Enoch Elumba! Welcome to my personal webpage! I am passionate about creating innovative solutions and building impactful software. Explore my projects to learn more about my work.</p>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2> 
+                <section class="sub-projects">
+                    <h3>Global Infection Simulator</h3>
+                    <p>A simulation tool that uses probablistic modeling based on virulence, it accounts for geographic proximity and connections</p>
+                    <p><strong>Skills:</strong> Python, Data Modeling, Epidemiological Simulation, Visualization</p>
+                </section>
+                <section class="sub-projects">
+                    <h3>EVCS Simulation</h3>
+                    <p>A porject that simulates electric vehicle charging station (EVCS) networks to study potential cyberattacks and develop strategies to improve resilience and security.</p>
+                    <p><strong>Skills:</strong> Cybersecurity, Systems Simulation, Network Modeling, Python, kali linux</p>
+                </section>
+                <a class="porject" href="https://2024.igem.wiki/uoregon/" target="_blank">
+                    <section class="sub-projects">
+                    <h3>iGEM Competition Website</h3>
+                    <p>A collaborative website built for the University of Oregon iGEM team to showcase synthetic biology research, document experiments, and present project outcomes for the 2024 iGEM competition.</p>
+                    <p><strong>Skills:</strong> Web Development, HTML, CSS</p>
+                </section>
+                </a>
+                <section class="sub-projects">
+                    <h3>CS 415 Project 3</h3>
+                    <p>Systems programming project focused on multithreading, synchronization, and file I/O to simulate bank transactions and reward systems.</p>
+                    <p><strong>Skills:</strong> C, Multithreading (pthreads), Synchronization, File I/O</p>
+                </section>
+                <section class="sub-projects">
+                    <h3>Online Calculator</h3>
+                    <p>A web-based calculator application supporting basic arithmetic and extended functions, with a clean and responsive interface for accessibility across devices.</p>
+                    <p><strong>Skills:</strong> HTML, CSS, JavaScript, Frontend Development</p>
+                </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <div class="footer-actions">
+            <a class="footer-button" href="https://www.linkedin.com/in/enoch-elumba-696880317/" target="_blank">LinkedIn</a>
+            <a class="footer-button" href="https://github.com/EElumba?tab=repositories" target="_blank">GitHub</a>
+            <a class="footer-button" href="mailto:elumbaeg@gmail.com">Email</a>
+        </div>
+    </footer>
+</body>
 </html>

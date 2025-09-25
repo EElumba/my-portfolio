@@ -1,0 +1,213 @@
+/*Global styles*/
+:root {
+  --bg: #0a0b10;            /* page background */
+  --bg-soft: #11131a;       /* cards/nav bg */
+  --text: #e9edf5;          /* primary text */
+  --muted: #9aa3b2;         /* secondary text */
+  --border: #1f2430;        /* subtle borders */
+  --accent-1: #00dbde;      /* gradient start */
+  --accent-2: #fc00ff;      /* gradient end */
+  --accent-3: #ff8c00;      /* gradient end */
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* { 
+    box-sizing: border-box;
+
+}
+html, body { 
+    margin:0; padding:0; 
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(252,0,255,.08), transparent 60%),
+              radial-gradient(900px 700px at 110% 20%, rgba(0,219,222,.08), transparent 55%),
+              var(--bg);
+  line-height: 1.65;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* ====== Header ====== */
+.header {
+  position: sticky; 
+  top: 0; 
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: color-mix(in oklab, var(--bg-soft) 80%, transparent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+
+section, #about, #projects, #contact {
+  scroll-margin-top: 70px;
+}
+
+.nav { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 10px 20px;
+ }
+
+.nav ul {
+  display: flex;
+  gap: 14px; 
+  align-items: center; 
+  justify-content: flex-end;
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+
+.nav a {
+  appearance: none; 
+  border: 1px solid var(--border);
+  background: #151824; 
+  color: var(--text);
+  padding: 8px 14px; 
+  border-radius: 10px; 
+  cursor: pointer;
+  text-decoration: none; 
+  font-weight: 600; 
+  letter-spacing: .2px;
+  transition: transform .12s ease, border-color .2s ease, background .2s ease;
+}
+.nav a:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent-2) 40%, var(--border));
+  background: #171b2b;
+}
+
+/* ====== Layout ====== */
+main, .about, .projects, .footer {
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+section, .projects, .about {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 22px 0;
+  box-shadow: var(--shadow);
+}
+
+/* ====== Title ====== */
+h1 {
+  margin: 48px auto 20px;
+  text-align: center;
+  font-size: clamp(3.2rem, 6vw, 4rem);
+  line-height: 1.1;
+  font-weight: 900;
+
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+  background-size: 200% 200%;
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  color: transparent;
+  animation: titleFlow 6s ease-in-out infinite;
+}
+
+@keyframes titleFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subheadings */
+h2 {
+  margin: 0 10px 10px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: .3px;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  line-height: normal;
+  color: var(--text);
+}
+
+/* Body text */
+p { 
+    margin: 0 5px 10px; 
+    color: var(--muted); 
+    font-size: 1rem; 
+}
+
+/* ====== Projects ====== */
+.projects { 
+    padding-top: 20px; 
+}
+
+.sub-projects, .project {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #141824;
+  margin-top: 14px;
+  transition: transform .12s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+#projects a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sub-projects:hover, .project:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--accent-1) 35%, var(--border));
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ====== Buttons (footer + anywhere) ====== */
+.footer-button, .btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #171b2b, #121622);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: transform .12s ease, border-color .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+}
+.footer-button:hover, .btn:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent-2) 40%, var(--border));
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+/* ====== Footer ====== */
+footer {
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 0 20px;
+  background: transparent;
+  border: none;
+}
+
+footer h2 {
+     margin-bottom: 12px; 
+    }
+
+footer .footer-actions { 
+    display: flex; gap: 12px; flex-wrap: wrap; 
+}
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  div h1 { animation: none; }
+}
