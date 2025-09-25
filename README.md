@@ -7,8 +7,7 @@ It highlights my work in **software development, cybersecurity, and simulation p
 ---
 
 ## 🚀 Live Demo
-🔗 [View Portfolio](https://EElumba.github.io/Portfolio/)  
-*(Update once deployed)*
+🔗 [View Portfolio](https://eelumba.github.io/my-portfolio/)  
 
 ---
 
